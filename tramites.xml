@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="tramites.css"?>
+<tramites>
+  <tramite id="T001">
+    <nombre>Crear una cuenta Llave MX</nombre>
+    <descripcion>
+      Llave MX permite utilizar una identidad digital para acceder
+      a los servicios gubernamentales que admiten este mecanismo.
+    </descripcion>
+    <requisitos>
+      CURP, número de teléfono celular, correo electrónico y
+      creación de una contraseña.
+    </requisitos>
+    <modalidad>En línea</modalidad>
+    <url>https://www.llave.gob.mx/</url>
+    <fuente>https://www.gob.mx/atdt/articulos/llave-mx</fuente>
+  </tramite>
+
+  <tramite id="T002">
+    <nombre>Consulta de la CURP</nombre>
+    <descripcion>
+      Permite consultar la Clave Única de Registro de Población
+      e imprimir el resultado disponible en el portal oficial.
+    </descripcion>
+    <requisitos>
+      Se puede buscar con la CURP conocida o mediante nombre y
+      datos de nacimiento solicitados por el portal.
+    </requisitos>
+    <modalidad>En línea</modalidad>
+    <url>https://www.gob.mx/curp/</url>
+    <fuente>https://www.gob.mx/curp/</fuente>
+  </tramite>
+
+  <tramite id="T003">
+    <nombre>Copia certificada del acta de nacimiento</nombre>
+    <descripcion>
+      Permite solicitar en línea una copia certificada del acta
+      de nacimiento mediante el servicio oficial.
+    </descripcion>
+    <requisitos>
+      CURP, nombre completo, fecha de nacimiento, entidad de registro,
+      sexo y datos de filiación. El pago depende de la entidad
+      correspondiente y del método de pago elegido.
+    </requisitos>
+    <modalidad>En línea</modalidad>
+    <url>https://www.gob.mx/tramites/ficha/expedicion-de-la-copia-certificada-del-acta-de-nacimiento-en-linea/RENAPO187</url>
+    <fuente>https://www.gob.mx/actas/articulos/preguntas-frecuentes-119110</fuente>
+  </tramite>
+</tramites>

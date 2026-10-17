@@ -1,0 +1,59 @@
+
+/* Estilos para mostrar los datos del archivo XML */
+
+tramites {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 20px;
+  color: #243247;
+  background: #f4f7fa;
+}
+
+tramite {
+  display: block;
+  margin-bottom: 18px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #d8e1e9;
+  border-left: 5px solid #123b5d;
+  border-radius: 10px;
+}
+
+nombre {
+  display: block;
+  margin-bottom: 10px;
+  color: #123b5d;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+descripcion,
+requisitos,
+modalidad,
+url {
+  display: block;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+requisitos::before {
+  content: "Requisitos: ";
+  font-weight: bold;
+}
+
+modalidad::before {
+  content: "Modalidad: ";
+  font-weight: bold;
+}
+
+url {
+  color: #075a92;
+  overflow-wrap: anywhere;
+}
+
+url::before {
+  content: "Enlace oficial: ";
+  font-weight: bold;
+}

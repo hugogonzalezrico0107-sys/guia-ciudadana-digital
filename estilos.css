@@ -1,0 +1,544 @@
+/* =========================================
+   GUIA CIUDADANA DIGITAL
+   Identidad visual y accesibilidad
+========================================= */
+
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #203447;
+  background: #edf3f5;
+  line-height: 1.7;
+  font-size: 16px;
+  font-synthesis: none;
+  scroll-behavior: smooth;
+
+  --azul: #123b50;
+  --azul-claro: #205b70;
+  --turquesa: #087e83;
+  --verde-suave: #71978b;
+  --fondo: #edf3f5;
+  --blanco: #ffffff;
+  --texto: #203447;
+  --borde: #d1e0e5;
+  --dorado: #d5a642;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+.contenedor {
+  width: min(1120px, 92%);
+  margin-inline: auto;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+  position: relative;
+  overflow: hidden;
+  padding: 38px 0 30px;
+  color: white;
+  background: linear-gradient(125deg, #102f45, #176879);
+  border-bottom: 5px solid var(--dorado);
+}
+
+.identificador {
+  margin: 0 0 12px;
+  color: #c8eee8;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.encabezado h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.encabezado .contenedor > p:not(.identificador) {
+  max-width: 720px;
+  color: #edf7fa;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 9px 14px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #80b4bc;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background: #ffffff;
+  color: var(--azul);
+}
+
+/* CONTENIDO */
+
+main {
+  padding-bottom: 36px;
+}
+
+section {
+  padding: 30px 0;
+  scroll-margin-top: 16px;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--azul);
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  line-height: 1.35;
+}
+
+h3 {
+  color: var(--azul);
+  line-height: 1.4;
+}
+
+.bienvenida {
+  max-width: 900px;
+  margin-top: 30px;
+  padding: 30px;
+  background: linear-gradient(120deg, #ffffff, #e2f2f0);
+  border: 1px solid #c8e1df;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgb(18 59 80 / 6%);
+}
+
+.bienvenida h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.etiqueta {
+  color: #087e83;
+  font-size: 0.83rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+/* AVISO ACADEMICO */
+
+.aviso {
+  margin-top: 22px;
+  padding: 16px 18px;
+  background: #fff5dc;
+  border-left: 5px solid var(--dorado);
+  border-radius: 5px;
+}
+
+/* BUSCADOR */
+
+label[for="busqueda"] {
+  display: block;
+  margin-top: 18px;
+  font-weight: 700;
+}
+
+input[type="search"] {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  min-height: 52px;
+  margin-top: 8px;
+  padding: 12px 16px;
+  color: var(--texto);
+  background: white;
+  border: 2px solid #8daab5;
+  border-radius: 10px;
+  font: inherit;
+}
+
+input[type="search"]:focus {
+  border-color: var(--turquesa);
+}
+
+#estado-busqueda {
+  min-height: 1.7em;
+  color: #205b70;
+  font-weight: 700;
+}
+
+/* TARJETAS DE TRAMITES */
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 290px), 1fr)
+  );
+  align-items: stretch;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 24px;
+  background: linear-gradient(155deg, #ffffff, #f1f8f8);
+  border: 1px solid var(--borde);
+  border-top: 5px solid var(--turquesa);
+  border-radius: 14px;
+  box-shadow: 0 5px 16px rgb(18 59 80 / 7%);
+  overflow-wrap: anywhere;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.tarjeta:nth-child(3n + 2) {
+  background: linear-gradient(155deg, #ffffff, #eef3fa);
+  border-top-color: #5579a7;
+}
+
+.tarjeta:nth-child(3n) {
+  background: linear-gradient(155deg, #ffffff, #f8f3e7);
+  border-top-color: #b28a35;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 9px 24px rgb(18 59 80 / 13%);
+  transform: translateY(-3px);
+}
+
+.tarjeta h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.tarjeta p {
+  margin: 0;
+}
+
+.tarjeta a {
+  display: inline-block;
+  margin-top: auto;
+  padding: 10px 14px;
+  color: white;
+  background: var(--azul-claro);
+  border-radius: 7px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tarjeta a:hover {
+  background: var(--turquesa);
+}
+
+/* PREGUNTAS FRECUENTES */
+
+details {
+  margin: 13px 0;
+  padding: 17px 20px;
+  background: #ffffff;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+}
+
+summary {
+  color: var(--azul);
+  cursor: pointer;
+  font-weight: 700;
+  padding: 3px 0;
+}
+
+details[open] {
+  background: #f4fbfa;
+  border-color: #a9d5d1;
+}
+
+details p {
+  margin-bottom: 4px;
+}
+
+/* SEGURIDAD DIGITAL */
+
+.consejo {
+  margin: 15px 0;
+  padding: 20px 22px;
+  background: linear-gradient(110deg, #ffffff, #e7f4f1);
+  border: 1px solid #c9e3dc;
+  border-left: 5px solid var(--turquesa);
+  border-radius: 10px;
+}
+
+.consejo h3 {
+  margin-top: 0;
+}
+
+/* FOCO DE TECLADO */
+
+a:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #b8860b;
+  outline-offset: 4px;
+}
+
+/* PIE DE PAGINA */
+
+footer {
+  margin-top: 24px;
+  padding: 28px 0;
+  color: white;
+  background: linear-gradient(125deg, #102f45, #176879);
+  border-top: 4px solid var(--dorado);
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+/* PANTALLAS PEQUENAS */
+
+@media (max-width: 600px) {
+  .encabezado {
+    padding: 28px 0 24px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    width: 100%;
+  }
+
+  .bienvenida {
+    padding: 22px;
+    margin-top: 20px;
+  }
+
+  section {
+    padding: 22px 0;
+  }
+
+  .tarjeta {
+    padding: 20px;
+  }
+}
+
+/* RESPETO A MOVIMIENTO REDUCIDO */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  .tarjeta {
+    transition: none;
+  }
+
+  .tarjeta:hover {
+    transform: none;
+  }
+}
+
+/* =========================================
+   MEJORA DE PORTADA Y TARJETAS
+========================================= */
+
+.bienvenida {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.85fr);
+  gap: 28px;
+  max-width: none;
+  margin-top: 32px;
+  padding: clamp(24px, 4vw, 42px);
+  background:
+    radial-gradient(ellipse at top right, #d5eeea 0%, transparent 48%),
+    linear-gradient(135deg, #ffffff 0%, #edf7f6 100%);
+  border: 1px solid #c8e1df;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgb(18 59 80 / 8%);
+}
+
+.bienvenida-contenido {
+  align-self: center;
+}
+
+.bienvenida h2 {
+  max-width: 600px;
+  margin: 12px 0 18px;
+  font-size: clamp(1.8rem, 3.3vw, 2.65rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.texto-bienvenida {
+  max-width: 600px;
+  font-size: 1.05rem;
+}
+
+.boton-principal {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 13px 20px;
+  color: #ffffff;
+  background: #087e83;
+  border: 2px solid #087e83;
+  border-radius: 9px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.boton-principal:hover {
+  color: #ffffff;
+  background: #123b50;
+  border-color: #123b50;
+  transform: translateY(-2px);
+}
+
+.beneficios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px;
+  background: rgb(255 255 255 / 76%);
+  border: 1px solid #d1e5e3;
+  border-radius: 14px;
+}
+
+.beneficio {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 12px;
+  border-radius: 9px;
+}
+
+.beneficio + .beneficio {
+  border-top: 1px solid #dce9e9;
+}
+
+.beneficio-icono {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: #ffffff;
+  background: #205b70;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.beneficio h3 {
+  margin: 0 0 4px;
+  font-size: 1.03rem;
+}
+
+.beneficio p {
+  margin: 0;
+  color: #40566a;
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.bienvenida .aviso {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+/* Encabezados de sección más definidos */
+
+#tramites > h2,
+#preguntas > h2,
+#seguridad > h2 {
+  margin-bottom: 10px;
+}
+
+#tramites {
+  padding-top: 38px;
+}
+
+#preguntas,
+#seguridad {
+  margin-top: 18px;
+  padding: 28px;
+  background: #e5eef1;
+  border: 1px solid #d2e0e5;
+  border-radius: 16px;
+}
+
+/* Tarjetas de servicios */
+
+.tarjeta {
+  position: relative;
+  gap: 14px;
+  padding: 25px 23px;
+  border-radius: 14px;
+}
+
+.tarjeta h3 {
+  font-size: 1.22rem;
+  line-height: 1.35;
+}
+
+.tarjeta p {
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.tarjeta a {
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Ajustes para móviles */
+
+@media (max-width: 760px) {
+  .bienvenida {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 24px;
+  }
+
+  .bienvenida .aviso {
+    grid-column: auto;
+  }
+
+  .beneficios {
+    padding: 10px;
+  }
+
+  #preguntas,
+  #seguridad {
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boton-principal {
+    transition: none;
+  }
+
+  .boton-principal:hover {
+    transform: none;
+  }
+}
